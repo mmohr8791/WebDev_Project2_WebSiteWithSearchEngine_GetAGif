@@ -4,6 +4,17 @@ body {
     background-color: purple;
 }
 
+.body-content {
+    text-align: center;
+    color: grey;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.body-content img {
+    height: 100%;
+    width: auto;
+}
+
 .navbar {
     background-color: rgb(red, green, blue);
     top: 0px;
@@ -34,4 +45,32 @@ a:hover {
 .myinput:hover {
     border: 2px white;
     border-radius: 7px;
+}
+
+.my-btn {
+    margin: 5px;
+    color: purple;
+    background-color: gold;
+    border: none;
+    width: 100%;
+}
+
+.my-btn:hover {
+    color: gold;
+    font-weight: bold;
+    background-color: grey;
+    border: 2px solid black;
+    transition: .5s;
+}
+
+
+figcaption {
+    color: grey;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.error {
+    text-align: center;
+    color: black;
 }
