@@ -8,19 +8,36 @@
     <script type="text/javascript" src="/js/main.js"></script>
     </head> 
 <body>
-    <nav class="navbar">
+    <nav class="navbar" navbar-expand-sm navbar-light">
         <a class="companyname" href="index.html">GetAGif</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" 
         data-target="#collasibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" 
-        aria-label="Toggle navigation"  
-        >My Button</button>
+        aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>    
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item dropdown my-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">More</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#">Top</a>
+                        <a class="dropdown-item" href="#">Bottom</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="myform js-search-form">
+                <input class="myinput js-search-input" type="text" name="search" 
+                placeholder="Search.." onkeyup="lettersAndNumbersOnly(this)">
+                <input class="myinput js-search-num" type="text" name="num" 
+                placeholder="Quantity... (Default 25)" onkeyup="numbersOnly(this)">
+                <button class="btn my-2 my-sm-0 my-btn" type="submit">Search</button>
+            </form>
+        </div>
     </nav>
-    <form class="myform">
-        <input class="myinput" type="text" name="search" 
-        placeholder="Search...">
-        <input class="myinput" type="text" name="num" 
-        placeholder="Quantity... (Default 25)">
-    <button class="navbar-toggler" type="submit">Search</button>
-     </form>
+    <div id="bottom" class="body-content">
+    </div>
+    <h1>Powered By: <img src="/img/GiphyLogo_small.gif"></h1>
 </body>
 </html>
+
