@@ -1,76 +1,177 @@
-/* style.css */
-
-body { 
-    background-color: purple;
-}
-
-.body-content {
-    text-align: center;
-    color: grey;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.body-content img {
-    height: 100%;
-    width: auto;
-}
-
-.navbar {
-    background-color: rgb(red, green, blue);
-    top: 0px;
+figcaption {
+  color: gold;
+  font-size: 20px;
+  font-family: cursive, Times, serif;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.companyname {
-    color: gold;
-    font-size: 36px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+body {
+  background-color: purple;
 }
 
-.companyname:hover {
-    text-decoration: none;
-    /* color: gold; */
+.body-content {
+  color: purple;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
 }
 
-.myinput {
-    margin: 5px;
-    width: 100%;
-    border-radius: 10px;
-    padding: 5px;
+.body-content img {
+  height: 100px;
+  width: auto;
 }
 
-.myinput:hover {
-    border: 2px white;
-    border-radius: 7px;
-}
-
-.my-btn {
-    margin: 5px;
-    color: purple;
-    background-color: gold;
-    border: none;
-    width: 100%;
-}
-
-.my-btn:hover {
-    color: gold;
-    font-weight: bold;
-    background-color: grey;
-    border: 2px solid black;
-    transition: .5s;
-}
-
-
-figcaption {
-    color: grey;
-    font-size: 15px;
-    font-family: 'Times New Roman', Times, serif;
+.my-companylogo {
+  /* color: black; */
+  padding-right: 26px;
+  font-size: 30px;
 }
 
 .error {
-    text-align: center;
-    color: black;
+  color: black;
+  text-align: center;
 }
+
+.results {
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10px;
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  max-width: 100%;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  -ms-grid-rows: minmax(300px, auto);
+      grid-template-rows: minmax(300px, auto);
+  margin: 40px;
+  grid-auto-flow: dense;
+  grid-gap: 10px;
+}
+
+.results .box {
+  color: #fff;
+  padding: 5px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .box img {
+  position: relative;
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.navbar {
+  background-color: purple;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+.my-btn {
+  background-color: gold;
+  color: purple;
+  width: 100%;
+  margin: 5px;
+  border: none;
+}
+
+.my-btn:hover {
+  background-color: purple;
+  color: gold;
+  border: 4px solid black;
+  font-weight: bold;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.my-input {
+  margin: 5px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.my-input:hover {
+  border: 4px solid black;
+  border-radius: 7px;
+}
+
+.dropdown-menu {
+  background-color: gold;
+  padding: 0px;
+}
+
+.dropdown-item:hover {
+  background-color: purple;
+  color: gold;
+  border: 2px solid black;
+  font-weight: bold;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media screen and (min-width: 320px) {
+  .my-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .my-input {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 575px) {
+  .my-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .my-input {
+    width: 90px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .my-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .my-input {
+    width: 200px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
