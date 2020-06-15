@@ -16,40 +16,48 @@ function numbersOnly(input) {
 }
 
 searchForm.addEventListener('submit', function(e) {
-    e.preventDefault();
+    e.preventDefault()
     const q = searchInput.value;
     const limit = searchNum.value;
     search(q, limit);
-})
+});
 
-function search (q, limit) {
-    const path = 'api.giphy.com/v1/gifs/search';
+function search(q, limit) {
     const apiKey = "4pXNXgB40a4SilkpPfI2ZlLu1qR6utmm";
-}
+    const path = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}&limit=${limit}`;
 
-fetch(path)
-    .then(function(res) {
+    function errorHandling() {
+        resultsEl.innerHTML = `<h3 class="error">Error loading data, make sure your network is on.</h3>`;
+    }
+
+    fetch(path)
+        .then(function(res) {
         return res.json()
     })
 
     .then(function(json) {
         let resultsHTML = ''
             json.data.forEach(function(obj) {
-            const url = obj.images.fixed_width.url
-            const width = obj.images.fixed_width.width
-            const height = obj.images.fixed_width.height
-            const alt = obj.title;
-            resultsHTML += `
-            <div class="box">
-                <div class="content">
-                    <figure>
-                        <img src="${url}" width="${width}" height="${height}" alt="${alt}">
-                        <figcaption>${alt}</figcaption>
-                    </figure>
+                const url = obj.images.fixed_width.url
+                const width = obj.images.fixed_width.width
+                const height = obj.images.fixed_width.height
+                const alt = obj.title;
+                resultsHTML += `
+                <div class="box">
+                    <div class="content">
+                        <figure>
+                            <img src="${url}" width="${width}" height="${height}" alt="${alt}">
+                            <figcaption>${alt}</figcaption>
+                        </figure>
+                    </div>
                 </div>
-            </div>
-            `
+                `
+            })
+
+            resultsEl.innerHTML = resultsHTML
         })
-        resultsEl.innerHTML = resultsHTML;
-    })
+        
+        .catch( errorHandling )
+};
+
 
