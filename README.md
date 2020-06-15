@@ -15,7 +15,7 @@
 # https://github.com/mmohr8791/WebDev_Project2_WebSiteWithSearchEngine_GetAGif.git
 #
 # This project is hosted with GitHub at the following url:
-# https://mmohr8791.github.io/WebDev_
+# https://mmohr8791.github.io/WebDev_Project2_WebSiteWithSearchEngine_GetAGif
 #
 #
 # Overview/Description Of Project:
