@@ -103,27 +103,32 @@ body {
   transition: .5s;
 }
 
+.my-refresh {
+  margin-left: 30px;
+  padding-top: 10px;
+}
+
+.my-refresh:hover {
+  padding-top: 5px;
+}
+
 .to-top {
   background-color: gold;
   color: purple;
-  position: -webkit-sticky;
-  position: sticky;
 }
 
 .top-btn {
   background-color: gold;
   color: purple;
-  width: 10%;
+  width: 4%;
   margin: 5px;
   border: none;
-  font-weight: bold;
 }
 
 .top-btn:hover {
   background-color: purple;
   color: gold;
   border: 5px solid black;
-  font-weight: bold;
   -webkit-transition: .5s;
   transition: .5s;
 }

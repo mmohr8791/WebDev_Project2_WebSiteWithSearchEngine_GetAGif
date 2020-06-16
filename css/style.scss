@@ -108,29 +108,35 @@ body {
     transition: .5s;
 }
 
+.my-refresh {
+    margin-left: 30px;
+    padding-top: 10px;
+    // border: 0px;
+}
+
+.my-refresh:hover {
+    padding-top: 5px;
+    // border: 0px;
+}
 
 .to-top {
     background-color: gold;
     color: purple;
-    position: sticky;
+    // position: sticky;
 }
-
 
 .top-btn {
     background-color: gold;
     color: purple;
-    // text-decoration-color: gold;
-    width: 10%;
+    width: 4%;
     margin: 5px;
     border: none;
-    font-weight: bold;
 }
 
 .top-btn:hover {
     background-color: purple;
     color: gold;
     border: 5px solid black;
-    font-weight: bold;
     transition: .5s;
 }
 
